@@ -57,7 +57,7 @@ namespace platziNetCore
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=School}/{action=Index}/{id?}");
             });
         }
     }
