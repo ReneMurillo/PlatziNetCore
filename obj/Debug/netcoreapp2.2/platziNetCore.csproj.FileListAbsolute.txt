@@ -28,3 +28,4 @@ c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\platziNetCore.Vi
 c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\platziNetCore.dll
 c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\platziNetCore.pdb
 C:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\platziNetCore.csproj.CopyComplete
+c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\School\Index.g.cshtml.cs
