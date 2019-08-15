@@ -1,13 +1,13 @@
-﻿@model Subject
+﻿@model Student
 @{
-    ViewData["Title"] = "Subject Information";
+    ViewData["Title"] = "Student Information";
     Layout = "_Simple";
 }
 
 <strong>From normal view</strong>
-<h1>Subject</h1>
+<h1>Student</h1>
 <h5>Name: @Model.Name</h5>
-<h5>Subject Id: @Model.UniqueId</h5>
+<h5>Student Id: @Model.UniqueId</h5>
 
 <strong>From partial view</strong>
 <partial name="_SchoolObjectSimple"></partial>

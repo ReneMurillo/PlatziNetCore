@@ -2948,6 +2948,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Student\\MultipleStudent.cshtml",
+      "TargetPath": "Views\\Student\\MultipleStudent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Subject\\MultipleSubject.cshtml",
       "TargetPath": "Views\\Subject\\MultipleSubject.cshtml",
       "FileKind": "mvc"
@@ -2960,6 +2965,11 @@
     {
       "FilePath": "Views\\Shared\\_Simple.cshtml",
       "TargetPath": "Views\\Shared\\_Simple.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Student\\Index.cshtml",
+      "TargetPath": "Views\\Student\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2993,8 +3003,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Shared\\_SimpleSubject.cshtml",
-      "TargetPath": "Views\\Shared\\_SimpleSubject.cshtml",
+      "FilePath": "Views\\Shared\\_SchoolObjectSimple.cshtml",
+      "TargetPath": "Views\\Shared\\_SchoolObjectSimple.cshtml",
       "FileKind": "mvc"
     },
     {
