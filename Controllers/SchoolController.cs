@@ -14,8 +14,12 @@ namespace platziNetCore.Controllers
         {
             var school = new School();
             school.FundationYear = 2005;
-            school.SchoolId = Guid.NewGuid().ToString();
+            school.UniqueId = Guid.NewGuid().ToString();
             school.Name = "PlatziSchool";
+            school.City = "Bogota";
+            school.Address = "Avenue always leave";
+            school.Country = "Colombia";
+            school.SchoolType = SchoolType.HighSchool;
             return View(school);
         }
     }
