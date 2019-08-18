@@ -10,16 +10,14 @@ namespace platziNetCore.Controllers
 {
     public class SchoolController : Controller
     {
+        private SchoolContext _context;
+        public SchoolController(SchoolContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            var school = new School();
-            school.FundationYear = 2005;
-            school.UniqueId = Guid.NewGuid().ToString();
-            school.Name = "PlatziSchool";
-            school.City = "Bogota";
-            school.Address = "Avenue always leave";
-            school.Country = "Colombia";
-            school.SchoolType = SchoolType.HighSchool;
+            var school = _context.Schools.FirstOrDefault();
             return View(school);
         }
     }
