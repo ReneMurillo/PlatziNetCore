@@ -4,17 +4,17 @@ namespace platziNetCore.Models
 {
     public abstract class SchoolObjectBase
     {
-        public string UniqueId { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
 
         public SchoolObjectBase() 
         {
-            UniqueId = Guid.NewGuid().ToString();
+            Id = Guid.NewGuid().ToString();
         }
 
         public override string ToString() 
         {
-            return $"{Name}, {UniqueId}";
+            return $"{Name}, {Id}";
         }
     }
 }
