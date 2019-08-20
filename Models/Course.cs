@@ -11,5 +11,8 @@ namespace platziNetCore.Models
 
         public string Address { get; set; }
 
+        public string SchoolId { get; set; }
+
+        public School School { get; set; }
     }
 }

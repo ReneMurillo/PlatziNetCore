@@ -5,7 +5,11 @@ namespace platziNetCore.Models
 {  
     public class Student: SchoolObjectBase
     {
-        public List<Evaluation> Evaluations {get; set;} = new List<Evaluation>();
+        public List<Evaluation> Evaluations {get; set;} 
+
+        public string CourseId { get; set; }
+
+        public Course Course { get; set; }
 
     }
 }
