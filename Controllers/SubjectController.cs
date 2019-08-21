@@ -17,9 +17,18 @@ namespace platziNetCore.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        [Route("Subject/Index")]
+        [Route("Subject/Index/{subjectId}")]
+        public IActionResult Index(string subjectId)
         {
-            return View(_context.Subjects.FirstOrDefault());
+            if(!string.IsNullOrWhiteSpace(subjectId))
+            {
+                return View(_context.Subjects.Find(subjectId));
+            }
+            else
+            {
+                return View("MultipleSubject", _context.Subjects);
+            }
         }
         public IActionResult MultipleSubject()
         {
