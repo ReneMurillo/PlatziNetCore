@@ -38,3 +38,4 @@ c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Stud
 c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Student\MultipleStudent.g.cshtml.cs
 c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Course\Index.g.cshtml.cs
 c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Course\MultipleCourse.g.cshtml.cs
+c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Course\Create.g.cshtml.cs

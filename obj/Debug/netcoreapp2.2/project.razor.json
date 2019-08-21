@@ -3008,6 +3008,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Course\\Create.cshtml",
+      "TargetPath": "Views\\Course\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Course\\Index.cshtml",
       "TargetPath": "Views\\Course\\Index.cshtml",
       "FileKind": "mvc"

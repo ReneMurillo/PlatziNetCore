@@ -37,6 +37,28 @@ namespace platziNetCore.Controllers
         {
             return View(_context.Courses);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Course course)
+        {
+            if(ModelState.IsValid)
+            {
+                var school = _context.Schools.FirstOrDefault();
+                course.SchoolId = school.Id;
+                _context.Courses.Add(course);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(MultipleCourse));
+            }
+            else
+            {
+                return View(course);
+            }
+        }
     }
 
 }
