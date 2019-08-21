@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Course>
+@{
+    ViewData["Title"] = "Course Information";
+    Layout = "_Simple";
+}
+
+<table class="table table-dark table-hover table-sm">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var course in Model)
+        {
+            <tr>
+                <td>@course.Name</td>
+                <td>@course.Id</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

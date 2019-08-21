@@ -17,9 +17,21 @@ namespace platziNetCore.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        [Route("Student/")]
+        [Route("Student/{studentId}")]
+        [Route("Student/Index")]
+        [Route("Student/Index/{studentId}")]
+        public IActionResult Index(string studentId)
         {
-            return View(_context.Students.FirstOrDefault());
+            if(!string.IsNullOrWhiteSpace(studentId))
+            {
+                return View(_context.Students.Find(studentId));
+            }
+            else
+            {
+                return View("MultipleStudent", _context.Students);
+            }
+            
         }
         public IActionResult MultipleStudent()
         {

@@ -36,3 +36,5 @@ c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Subj
 c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_SchoolObjectSimple.g.cshtml.cs
 c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Student\Index.g.cshtml.cs
 c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Student\MultipleStudent.g.cshtml.cs
+c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Course\Index.g.cshtml.cs
+c:\Users\Murillo\Projects\platziNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Course\MultipleCourse.g.cshtml.cs

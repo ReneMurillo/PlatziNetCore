@@ -3008,6 +3008,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Course\\Index.cshtml",
+      "TargetPath": "Views\\Course\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -3015,6 +3020,11 @@
     {
       "FilePath": "Views\\Shared\\Index.cshtml",
       "TargetPath": "Views\\Shared\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Course\\MultipleCourse.cshtml",
+      "TargetPath": "Views\\Course\\MultipleCourse.cshtml",
       "FileKind": "mvc"
     },
     {
