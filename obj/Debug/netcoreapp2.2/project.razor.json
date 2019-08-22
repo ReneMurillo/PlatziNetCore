@@ -2948,8 +2948,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Student\\Details.cshtml",
+      "TargetPath": "Views\\Student\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Student\\Create.cshtml",
+      "TargetPath": "Views\\Student\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Student\\MultipleStudent.cshtml",
       "TargetPath": "Views\\Student\\MultipleStudent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Evaluation\\Edit.cshtml",
+      "TargetPath": "Views\\Evaluation\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2963,6 +2978,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Student\\Edit.cshtml",
+      "TargetPath": "Views\\Student\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_Simple.cshtml",
       "TargetPath": "Views\\Shared\\_Simple.cshtml",
       "FileKind": "mvc"
@@ -2973,8 +2993,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Subject\\Details.cshtml",
+      "TargetPath": "Views\\Subject\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\School\\Edit.cshtml",
+      "TargetPath": "Views\\School\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2983,8 +3013,38 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Course\\Edit.cshtml",
+      "TargetPath": "Views\\Course\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\School\\Details.cshtml",
+      "TargetPath": "Views\\School\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Course\\Details.cshtml",
+      "TargetPath": "Views\\Course\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Student\\Delete.cshtml",
+      "TargetPath": "Views\\Student\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Evaluation\\Index.cshtml",
+      "TargetPath": "Views\\Evaluation\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Evaluation\\Create.cshtml",
+      "TargetPath": "Views\\Evaluation\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2993,8 +3053,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\School\\Create.cshtml",
+      "TargetPath": "Views\\School\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Subject\\Delete.cshtml",
+      "TargetPath": "Views\\Subject\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Course\\Delete.cshtml",
+      "TargetPath": "Views\\Course\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Subject\\Index.cshtml",
       "TargetPath": "Views\\Subject\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\School\\Delete.cshtml",
+      "TargetPath": "Views\\School\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -3003,8 +3083,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Subject\\Edit.cshtml",
+      "TargetPath": "Views\\Subject\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_SchoolObjectSimple.cshtml",
       "TargetPath": "Views\\Shared\\_SchoolObjectSimple.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Subject\\Create.cshtml",
+      "TargetPath": "Views\\Subject\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -3023,6 +3113,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Evaluation\\Details.cshtml",
+      "TargetPath": "Views\\Evaluation\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\Index.cshtml",
       "TargetPath": "Views\\Shared\\Index.cshtml",
       "FileKind": "mvc"
@@ -3035,6 +3130,11 @@
     {
       "FilePath": "Views\\School\\Index.cshtml",
       "TargetPath": "Views\\School\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Evaluation\\Delete.cshtml",
+      "TargetPath": "Views\\Evaluation\\Delete.cshtml",
       "FileKind": "mvc"
     }
   ],

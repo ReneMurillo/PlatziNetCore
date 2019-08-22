@@ -35,9 +35,9 @@ namespace platziNetCore
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
+            
             services.AddDbContext<SchoolContext>(
-                options => options.UseInMemoryDatabase(databaseName: "testDatabase")
+                options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString"))
             );
         }
 

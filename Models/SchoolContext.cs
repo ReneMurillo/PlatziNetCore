@@ -66,11 +66,11 @@ namespace platziNetCore.Models
         private static List<Course> LoadCourses(School school)
         {
             return new List<Course>(){
-                new Course() {Id = Guid.NewGuid().ToString(), SchoolId = school.Id, Name = "101", Journey = JourneyType.Morning},
-                new Course() {Id = Guid.NewGuid().ToString(), SchoolId = school.Id, Name = "201", Journey = JourneyType.Morning},
-                new Course() {Id = Guid.NewGuid().ToString(), SchoolId = school.Id, Name = "301", Journey = JourneyType.Afternoon},
-                new Course() {Id = Guid.NewGuid().ToString(), SchoolId = school.Id, Name = "401", Journey = JourneyType.Afternoon},
-                new Course() {Id = Guid.NewGuid().ToString(), SchoolId = school.Id, Name = "501", Journey = JourneyType.Night},
+                new Course() {Id = Guid.NewGuid().ToString(), SchoolId = school.Id, Name = "101", Journey = JourneyType.Morning, Address = "Pepito Avenue"},
+                new Course() {Id = Guid.NewGuid().ToString(), SchoolId = school.Id, Name = "201", Journey = JourneyType.Morning, Address = "Pepito Avenue"},
+                new Course() {Id = Guid.NewGuid().ToString(), SchoolId = school.Id, Name = "301", Journey = JourneyType.Afternoon, Address = "Pepito Avenue"},
+                new Course() {Id = Guid.NewGuid().ToString(), SchoolId = school.Id, Name = "401", Journey = JourneyType.Afternoon, Address = "Pepito Avenue"},
+                new Course() {Id = Guid.NewGuid().ToString(), SchoolId = school.Id, Name = "501", Journey = JourneyType.Night, Address = "Pepito Avenue"},
             };
         }
 

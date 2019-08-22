@@ -1,64 +1,159 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using platziNetCore.Models;
 
 namespace platziNetCore.Controllers
 {
     public class CourseController : Controller
     {
-        private SchoolContext _context;
+        private readonly SchoolContext _context;
 
         public CourseController(SchoolContext context)
         {
             _context = context;
         }
 
-        [Route("Course/")]
-        [Route("Course/{courseId}")]
-        [Route("Course/Index")]
-        [Route("Course/Index/{courseId}")]
-        public IActionResult Index(string courseId)
+        // GET: Course
+        public async Task<IActionResult> Index()
         {
-            if(!string.IsNullOrWhiteSpace(courseId))
-            {
-                return View(_context.Courses.Find(courseId));
-            }
-            else
-            {
-                return View("MultipleCourse", _context.Courses);
-            }
-            
-        }
-        public IActionResult MultipleCourse()
-        {
-            return View(_context.Courses);
+            var schoolContext = _context.Courses.Include(c => c.School);
+            return View(await schoolContext.ToListAsync());
         }
 
+        // GET: Course/Details/5
+        public async Task<IActionResult> Details(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var course = await _context.Courses
+                .Include(c => c.School)
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            return View(course);
+        }
+
+        // GET: Course/Create
         public IActionResult Create()
         {
+            ViewData["SchoolId"] = new SelectList(_context.Schools, "Id", "Id");
             return View();
         }
 
+        // POST: Course/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public IActionResult Create(Course course)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Name,Journey,Address,SchoolId,Id")] Course course)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                var school = _context.Schools.FirstOrDefault();
-                course.SchoolId = school.Id;
-                _context.Courses.Add(course);
-                _context.SaveChanges();
-                return RedirectToAction(nameof(MultipleCourse));
+                _context.Add(course);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            else
+            ViewData["SchoolId"] = new SelectList(_context.Schools, "Id", "Id", course.SchoolId);
+            return View(course);
+        }
+
+        // GET: Course/Edit/5
+        public async Task<IActionResult> Edit(string id)
+        {
+            if (id == null)
             {
-                return View(course);
+                return NotFound();
             }
+
+            var course = await _context.Courses.FindAsync(id);
+            if (course == null)
+            {
+                return NotFound();
+            }
+            ViewData["SchoolId"] = new SelectList(_context.Schools, "Id", "Id", course.SchoolId);
+            return View(course);
+        }
+
+        // POST: Course/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(string id, [Bind("Name,Journey,Address,SchoolId,Id")] Course course)
+        {
+            if (id != course.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(course);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!CourseExists(course.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["SchoolId"] = new SelectList(_context.Schools, "Id", "Id", course.SchoolId);
+            return View(course);
+        }
+
+        // GET: Course/Delete/5
+        public async Task<IActionResult> Delete(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var course = await _context.Courses
+                .Include(c => c.School)
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            return View(course);
+        }
+
+        // POST: Course/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(string id)
+        {
+            var course = await _context.Courses.FindAsync(id);
+            _context.Courses.Remove(course);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool CourseExists(string id)
+        {
+            return _context.Courses.Any(e => e.Id == id);
         }
     }
-
 }
