@@ -47,7 +47,7 @@ namespace platziNetCore.Controllers
         // GET: Course/Create
         public IActionResult Create()
         {
-            ViewData["SchoolId"] = new SelectList(_context.Schools, "Id", "Id");
+            ViewData["SchoolId"] = new SelectList(_context.Schools, "Id", "Name");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace platziNetCore.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SchoolId"] = new SelectList(_context.Schools, "Id", "Id", course.SchoolId);
+            ViewData["SchoolId"] = new SelectList(_context.Schools, "Name", "Id", course.SchoolId);
             return View(course);
         }
 
@@ -81,7 +81,7 @@ namespace platziNetCore.Controllers
             {
                 return NotFound();
             }
-            ViewData["SchoolId"] = new SelectList(_context.Schools, "Id", "Id", course.SchoolId);
+            ViewData["SchoolId"] = new SelectList(_context.Schools, "Name", "Id", course.SchoolId);
             return View(course);
         }
 
@@ -117,7 +117,7 @@ namespace platziNetCore.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SchoolId"] = new SelectList(_context.Schools, "Id", "Id", course.SchoolId);
+            ViewData["SchoolId"] = new SelectList(_context.Schools, "Name", "Id", course.SchoolId);
             return View(course);
         }
 
